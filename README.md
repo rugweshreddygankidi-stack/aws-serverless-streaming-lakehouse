@@ -83,3 +83,4 @@ pytest -q
 - Athena `INSERT` per batch is simple but not the cheapest path at very high volume; Firehose with an Iceberg destination or a Spark/Glue streaming job would scale better.
 - Run `OPTIMIZE ... REWRITE DATA USING BIN_PACK` and `VACUUM` on a schedule (see `sql/analytics_queries.sql`).
 - Add a CloudWatch alarm on the SQS failed-batch queue depth and on Lambda errors.
+
