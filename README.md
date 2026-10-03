@@ -17,7 +17,7 @@ flowchart LR
 ## Design decisions
 
 | Decision | Why |
-|---|
+|---|---|
 | Lambda batches (5,000 records or 60 s) before writing | One Athena `INSERT` per batch instead of per record keeps cost and small-file counts down. |
 | Validate in Lambda, dead-letter bad rows to S3 | Bad data never reaches the table, but nothing is silently lost. |
 | In-batch dedupe + `events_dedup` view | Kinesis is at-least-once; retries can duplicate rows. The view guarantees one row per `event_id`. |
