@@ -1,0 +1,2 @@
+aws_region           = "us-east-1"
+sdk_pandas_layer_arn = "PASTE-THE-LAYER-ARN-FOR-YOUR-REGION-HERE"
